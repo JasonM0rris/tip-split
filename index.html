@@ -11,12 +11,13 @@
 </head>
 
 <body>
-    <main id="container">
-        <h1>Tab Splitter</h1>
+    <div id="container">
+    <main >
+        <h1>Tip Splitter</h1>
         <section>
             <div class="bill">
                 <label for="yourBill">Bill</label>
-                <input type="number" placeholder="Your bill" value="" id="yourBill" />
+                <input type="number" placeholder="Amount" value="" id="yourBill" />
             </div>
             <div>
                 <div class="space-between">
@@ -34,25 +35,29 @@
                 <span>Total</span>
                 <span id="totalWithTip"></span>
             </div>
+     
         </section>
-        <section>
-            <div>
-                <div class="space-between">
-                    <label for="splitInput">Split</label>
-                    <span id="splitValue">1 person</span>
-                </div>
-                <input type="range" name="" min="1" max="10" value="1" id="splitInput" class="range">
-            </div>
-            <div class="space-between">
-                <span>Bill each</span>
-                <span id="billEach"></span>
-            </div>
-            <div class="space-between">
-                <span>Tip each</span>
-                <span id="tipEach"></span>
-            </div>
-        </section>
+     
     </main>
+    <section class="split-people">
+        <div>
+            <div class="space-between">
+                <label for="splitInput">Split</label>
+                <span id="splitValue">1 person</span>
+            </div>
+            <input type="range" name="" min="1" max="10" value="1" id="splitInput" class="range">
+        </div>
+        <div class="space-last">
+            <span>Bill each</span>
+            <span id="billEach"></span>
+        </div>
+        <div class="space-last">
+            <span>Tip each</span>
+            <span id="tipEach"></span>
+        </div>
+    </section>
+    </div>
+
     <script type="text/javascript">
     function formatMoney(value) {
         value = Math.ceil(value * 100) / 100;
